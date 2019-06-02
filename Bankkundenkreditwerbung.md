@@ -36,7 +36,7 @@ Dabei ist es möglich durch eine Usertask eine Fehlermeldung einzusehen, anschli
 ## DMN „Werbeprogramm entscheiden“
 _Ist der Wetterbericht erfasst, wird folglich, mittels Business-Rule-Task über das Werbeprogramm entschieden und das DRD ausgeführt._
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cboel-xsixr.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cboel-xsixr.svg' title='' /></a>
+<a href='https://svgur.com/i/DNH.svg' ><img src='https://svgur.com/i/DNH.svg' title='' /></a>
 
 Bei dem DRD handelt es sich um eine Table mit der Hit Policy= First. Der Input für die DRD besteht aus der Bewölkung in Prozent (integer) und Temperatur in Celsius(double). Der Outputwert ist durch eine String-Enumeration dargestellt.
 Dabei sollen die durchschnittliche Bewölkung und Temperatur (Edit Number: beide Comparison) der nächsten 5 Tage dargestellt werden.
@@ -54,29 +54,29 @@ _________________________________
  
 ## Beschreibung des Workflow
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cb6q4-5nk7w.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cb6q4-5nk7w.svg' title='' /></a>
+<a href='https://svgur.com/i/DMT.svg' ><img src='https://svgur.com/i/DMT.svg' title='' /></a>
 
 *Den Prozess starten.*
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cbkv6-4rz7z.svg' ><img src='hhttps://s4.aconvert.com/convert/p3r68-cdx67/cbkv6-4rz7z.svg' title='' /></a>
+<a href='https://svgur.com/i/DLm.svg' ><img src='https://svgur.com/i/DLm.svg' title='' /></a>
 
 Kundendaten werden eingegeben und werden dem DMN-Prozess „Kundenbewertung entscheiden“ zur Verfügung gestellt.
 Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „Guter Kunde“ erhält. Im weiteren Prozessverlauf wird damit die Call-Activity „Werbeprogramm durchführen“ ausgeführt.
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cb9mv-chmga.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cb9mv-chmga.svg' title='' /></a>
+<a href='https://svgur.com/i/DLc.svg' ><img src='https://svgur.com/i/DLc.svg' title='' /></a>
 
 _Kundenbewertung:_ **„Guter Kunde“**
 
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cbppf-0815b.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cbppf-0815b.svg' title='' /></a>
+<a href='https://svgur.com/i/DMd.svg' ><img src='https://svgur.com/i/DMd.svg' title='' /></a>
  
 *Der Prozess kann nicht fortfahren, da das Workflowmanagementsystem nicht mit dem Internet verbunden ist. Der Error „Keine Internetverbindung“ wird geworfen und die Ausnahmebehandlung gestartet. Nach herstellen der Internetverbindung kann der Prozess fortfahren.*
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cb8mp-s58l1.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cb8mp-s58l1.svg' title='' /></a>
+<a href='https://svgur.com/i/DMU.svg' ><img src='https://svgur.com/i/DMU.svg' title='' /></a>
 
 *Die Service Task „Wetterbericht abrufen“ hat von OpenWeatherMaps die Bewölkungsdaten und die Temperatur der nächsten 5 Tage abgerufen und Durchschnittswerte aus den Tagwerten gebildet. Der DMN-Prozess „Werbeprogramm entscheiden“ empfiehlt anhand der Wetterdaten einen Wanderurlaub.*
 
-<a href='https://s2.aconvert.com/convert/p3r68-cdx67/cbtw9-p6fxm.svg' ><img src='https://s2.aconvert.com/convert/p3r68-cdx67/cbtw9-p6fxm.svg' title='' /></a>
+<a href='https://svgur.com/i/DKg.svg' ><img src='https://svgur.com/i/DKg.svg' title='' /></a>
 
  
 _Es wird eine E-Mail an das E-Mail-Postfach des Kunden gesendet, die den Werbetext und die Wetterkonditionen enthält._
@@ -118,7 +118,7 @@ _Die Abfrage liefert ein json-Dokument zurück, das Wetterdaten in 3-Stunden-Int
 
 
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cbj1x-vhzds.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cbj1x-vhzds.svg' title='' /></a>
+<a href='https://svgur.com/i/DMV.svg' ><img src='https://svgur.com/i/DMV.svg' title='' /></a>
 
  
 
@@ -127,7 +127,7 @@ Mithilfe einer Schleife werden die Attribut-Werte der Attribute main.temp und cl
 
 
 
-<a href='https://s2.aconvert.com/convert/p3r68-cdx67/cbz1j-8jm96.svg' ><img src='https://s2.aconvert.com/convert/p3r68-cdx67/cbz1j-8jm96.svg' title='' /></a>
+<a href='https://svgur.com/i/DM6.svg' ><img src='https://svgur.com/i/DM6.svg' title='' /></a>
 
 
 
