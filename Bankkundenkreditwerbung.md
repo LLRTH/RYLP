@@ -48,7 +48,7 @@ Trifft die Bewölkung und Temperatur bei keinem der o.g. Werte zu wird ein "Kur-
 **Weiter im BPMN-Prozess**
 Ist das Werbeprogramm entschieden, kann dieses am nächsten Montag um 8 Uhr, was durch ein Timer-Event gesteuert wird, durch eine User-Task eingesehen werden. Der Prozess soll freitags ausgeführt werden, sodass die E-Mail für den nächsten Montag scheduled wird. Abschließend wird mittels Send Task, ein Kreditangebot für einen Kurzurlaub in der Region Nordost als Werbung zu dem Kunden geschickt. Der Prozess ist beendet.
 
-
+_________________________________
 
  
 ## Beschreibung des Workflow
@@ -80,7 +80,7 @@ Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „G
  
  Es wird eine E-Mail an das E-Mail-Postfach des Kunden gesendet, die den Werbetext und die Wetterkonditionen enthält.
  
- 
+ _________________________________
  
  
 ## Ausgewählte Elemente der technischen Implementierung
