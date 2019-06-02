@@ -113,7 +113,7 @@ execution.setVariable("InternetConnection", sum);
 | WeatherAPI | https://api.openweathermap.org/data/2.5/forecast?q=Stralsund&units=metric&appid=aValidAPIKey |
 
 
-Die Abfrage liefert ein json-Dokument zurück, das Wetterdaten in 3-Stunden-Intervallen beginnend bei der aktuellen abgerundeten Stunde plus 3 Stunden enthält. Die Abb. unten zeigt das erste Listen-Element des json-Dokumentes.
+_Die Abfrage liefert ein json-Dokument zurück, das Wetterdaten in 3-Stunden-Intervallen beginnend bei der aktuellen abgerundeten Stunde plus 3 Stunden enthält. Die Abb. unten zeigt das erste Listen-Element des json-Dokumentes._
 
 
 
