@@ -1,11 +1,9 @@
 # Bankkundenurlaubskreditwerbung
 _________________________________
-
-
-# Projektdokumentation
 _________________________________
 
 
+# Projektdokumentation
 ## Team: Lampert, Reyer
 
 _________________________________
