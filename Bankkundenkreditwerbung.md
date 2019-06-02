@@ -75,7 +75,7 @@ Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „G
 
 *Die Service Task „Wetterbericht abrufen“ hat von OpenWeatherMaps die Bewölkungsdaten und die Temperatur der nächsten 5 Tage abgerufen und Durchschnittswerte aus den Tagwerten gebildet. Der DMN-Prozess „Werbeprogramm entscheiden“ empfiehlt anhand der Wetterdaten einen Wanderurlaub.*
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cbklb-z8gpi.svg' ><img src='hhttps://s4.aconvert.com/convert/p3r68-cdx67/cbklb-z8gpi.svg' title='' /></a>
+<a href='https://s2.aconvert.com/convert/p3r68-cdx67/cbtw9-p6fxm.svg' ><img src='https://s2.aconvert.com/convert/p3r68-cdx67/cbtw9-p6fxm.svg' title='' /></a>
 
  
  Es wird eine E-Mail an das E-Mail-Postfach des Kunden gesendet, die den Werbetext und die Wetterkonditionen enthält.
