@@ -6,7 +6,7 @@ _________________________________
 _________________________________
 
 
-## Team: Reyer, Lampert
+## Team: Lampert, Reyer
 
 _________________________________
 
@@ -129,7 +129,7 @@ Mithilfe einer Schleife werden die Attribut-Werte der Attribute main.temp und cl
 
 
 
-<a href='https://s4.aconvert.com/convert/p3r68-cdx67/cboic-csjfz.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cboic-csjfz.svg' title='' /></a>
+<a href='https://s2.aconvert.com/convert/p3r68-cdx67/cbz1j-8jm96.svg' ><img src='https://s2.aconvert.com/convert/p3r68-cdx67/cbz1j-8jm96.svg' title='' /></a>
 
 
 
