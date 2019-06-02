@@ -64,7 +64,7 @@ Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „G
 
 <a href='https://s4.aconvert.com/convert/p3r68-cdx67/cb9mv-chmga.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cb9mv-chmga.svg' title='' /></a>
 
-**Kundenbewertung „Guter Kunde“**
+_Kundenbewertung:_ **„Guter Kunde“**
 
 
 <a href='https://s4.aconvert.com/convert/p3r68-cdx67/cbppf-0815b.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cbppf-0815b.svg' title='' /></a>
@@ -78,7 +78,7 @@ Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „G
 <a href='https://s2.aconvert.com/convert/p3r68-cdx67/cbtw9-p6fxm.svg' ><img src='https://s2.aconvert.com/convert/p3r68-cdx67/cbtw9-p6fxm.svg' title='' /></a>
 
  
- Es wird eine E-Mail an das E-Mail-Postfach des Kunden gesendet, die den Werbetext und die Wetterkonditionen enthält.
+_Es wird eine E-Mail an das E-Mail-Postfach des Kunden gesendet, die den Werbetext und die Wetterkonditionen enthält._
  
  _________________________________
  
