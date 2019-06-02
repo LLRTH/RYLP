@@ -13,6 +13,7 @@ _________________________________
 Mithilfe des Prozesses „Bankkundenurlaubskreditwerbung“ sollen geeignete, kreditfähige Kunden ausgewählt werden, denen eine Werbe-E-Mail über die Kreditaufnahme für einen Urlaub an der Ostsee gesendet wird. Je nach dem wie das durchschnittliche Wetter der nächsten 5 Tage in Stralsund ist, wird dem Kunden ein Badeurlaub, Fahrradurlaub , Wanderurlaub oder Kur-/Wellnessurlaub vorgeschlagen.
 
 ## BPMN-Prozess
+
 Der Gesamtprozess „Bankkundenurlaubskreditwerbung“ besteht aus 2 gesonderten Prozessmodellen (2 Teilen), die durch eine Call-Activity miteinander verbunden sind.
 In dem Pool Bank ist die Lane Service Mitarbeiter und CRM- System enthalten. Diese wird sich im späteren Verlauf trennen.
 Der Prozess startet. Es wird mithilfe einer Usertask, der Servic-MA aufgefordert seine Kundendaten einzugeben.
@@ -34,7 +35,7 @@ Der Prozess startet im CRM-System mit dem Unterprozess Prüfung der Internetverb
 Dabei ist es möglich durch eine Usertask eine Fehlermeldung einzusehen, anschließend wird alle 10 min durch das Timer-Event geprüft, ob eine Internetverbindung besteht. Anschließend wird dabei wird mithilfe einer Service Task Wetterbericht abrufen die Wetter-API aufgerufen. Damit endet der Unterprozess.
 
 ## DMN „Werbeprogramm entscheiden“
-Ist der Wetterbericht erfasst, wird folglich, mittels Business-Rule-Task über das Werbeprogramm entschieden und das DRD ausgeführt.
+_Ist der Wetterbericht erfasst, wird folglich, mittels Business-Rule-Task über das Werbeprogramm entschieden und das DRD ausgeführt._
 
 <a href='https://s4.aconvert.com/convert/p3r68-cdx67/cboel-xsixr.svg' ><img src='https://s4.aconvert.com/convert/p3r68-cdx67/cboel-xsixr.svg' title='' /></a>
 
@@ -45,7 +46,8 @@ Ist die Bewölkung <=40 und die Temperatur >=10 wird ein Fahrradurlaub vorgeschl
 Ist die Bewölkung >40 und die Temperatur >=10 wird ein Wanderurlaub vorgeschlagen.
 Trifft die Bewölkung und Temperatur bei keinem der o.g. Werte zu wird ein "Kur-/Wellnessurlaub" vorgeschlagen.
 
-**Weiter im BPMN-Prozess**
+## Weiter im BPMN-Prozess:
+
 Ist das Werbeprogramm entschieden, kann dieses am nächsten Montag um 8 Uhr, was durch ein Timer-Event gesteuert wird, durch eine User-Task eingesehen werden. Der Prozess soll freitags ausgeführt werden, sodass die E-Mail für den nächsten Montag scheduled wird. Abschließend wird mittels Send Task, ein Kreditangebot für einen Kurzurlaub in der Region Nordost als Werbung zu dem Kunden geschickt. Der Prozess ist beendet.
 
 _________________________________
