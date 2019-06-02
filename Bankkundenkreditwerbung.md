@@ -25,8 +25,7 @@ _Hinweis: Die ersten 3 Tasks entsprechen dem Prozess „Bankkundenbewertung“ u
 
 Durch die Usertask „Kundenberatung einsehen“ ist es dem Service-MA möglich, diese Bewertung einzusehen. Darauffolgend wird nach der Kundenbewertung durch ein X-Or-Gateway die Entscheidung getroffen ob es sich um einen guten Kunden handelt oder ob es sich um keinen guten Kunden handelt. Ist dies der Fall ist der Prozess beendet. Handelt es sich um einen guten Kunden wird das Werbeprogramm der Bank gestartet. Dieses geschieht durch eine Call- Activiety-Task. Das Werbeprogramm wird durchgeführt.
 
- 
-Durch die Call-Activity wird der 2. Teil des Gesamtprozesses aufgerufen.
+ _Durch die Call-Activity wird der 2. Teil des Gesamtprozesses aufgerufen._
 
 <a href='https://svgshare.com/i/DL2.svg' ><img src='https://svgshare.com/i/DL2.svg' title='' /></a>
 
@@ -107,8 +106,7 @@ catch(e){
 execution.setVariable("InternetConnection", sum);
 ```
 
-**Service Task „Wetterbericht abrufen“**
-Mit der Folgenden URL kann eine Wettervorhersage für die nächsten 5 Tage für Stralsund abgerufen werden.
+**Service Task „Wetterbericht abrufen“:** _Mit der Folgenden URL kann eine Wettervorhersage für die nächsten 5 Tage für Stralsund abgerufen werden._
 
 | API | URL |
 | ------ | ------ |
