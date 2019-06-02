@@ -60,8 +60,8 @@ _________________________________
 
 <a href='https://svgur.com/i/DLm.svg' ><img src='https://svgur.com/i/DLm.svg' title='' /></a>
 
-Kundendaten werden eingegeben und werden dem DMN-Prozess „Kundenbewertung entscheiden“ zur Verfügung gestellt.
-Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „Guter Kunde“ erhält. Im weiteren Prozessverlauf wird damit die Call-Activity „Werbeprogramm durchführen“ ausgeführt.
+_Kundendaten werden eingegeben und werden dem DMN-Prozess „Kundenbewertung entscheiden“ zur Verfügung gestellt.
+Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „Guter Kunde“ erhält. Im weiteren Prozessverlauf wird damit die Call-Activity „Werbeprogramm durchführen“ ausgeführt._
 
 <a href='https://svgur.com/i/DLc.svg' ><img src='https://svgur.com/i/DLc.svg' title='' /></a>
 
