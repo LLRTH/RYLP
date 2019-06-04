@@ -19,7 +19,7 @@ In dem Pool Bank ist die Lane Service Mitarbeiter und CRM- System enthalten. Die
 Der Prozess startet. Es wird mithilfe einer Usertask, der Servic-MA aufgefordert seine Kundendaten einzugeben.
 Folglich wird in der Businessrule-Task über die Bewertung des Kunden entschieden.
 
-<a href='https://svgshare.com/i/DKt.svg' ><img src='https://svgshare.com/i/DKt.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk.png?raw=true' title='' /></a>
 
 _Hinweis: Die ersten 3 Tasks entsprechen dem Prozess „Bankkundenbewertung“ und wurden in einer gesonderten Dokumentation im Rahmen des Executable DMN-Seminars bereits beschrieben._
 
@@ -27,7 +27,7 @@ Durch die Usertask „Kundenberatung einsehen“ ist es dem Service-MA möglich,
 
  _Durch die Call-Activity wird der 2. Teil des Gesamtprozesses aufgerufen._
 
-<a href='https://svgshare.com/i/DL2.svg' ><img src='https://svgshare.com/i/DL2.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk2.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk2.png?raw=true' title='' /></a>
 
 Der Pool Bank enthält die Lanes CRM-System und Service Mitarbeiter (o.g.). Diese ist nun in zwei Lanes aufgeteilt.
 Der Prozess startet im CRM-System mit dem Unterprozess Prüfung der Internetverbindung. Dieses erfolgt mit Hilfe einer Skript-Task. Mittels Throw-Catch-Pattern wird der Prozess an der Stelle beendet, sollte keine Internetverbindung vorhanden sein.
@@ -36,7 +36,7 @@ Dabei ist es möglich durch eine Usertask eine Fehlermeldung einzusehen, anschli
 ## DMN „Werbeprogramm entscheiden“
 _Ist der Wetterbericht erfasst, wird folglich, mittels Business-Rule-Task über das Werbeprogramm entschieden und das DRD ausgeführt._
 
-<a href='https://svgur.com/i/DNH.svg' ><img src='https://svgur.com/i/DNH.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk3.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk3.png?raw=true' title='' /></a>
 
 Bei dem DRD handelt es sich um eine Table mit der Hit Policy= First. Der Input für die DRD besteht aus der Bewölkung in Prozent (integer) und Temperatur in Celsius(double). Der Outputwert ist durch eine String-Enumeration dargestellt.
 Dabei sollen die durchschnittliche Bewölkung und Temperatur (Edit Number: beide Comparison) der nächsten 5 Tage dargestellt werden.
@@ -54,11 +54,12 @@ _________________________________
  
 ## Beschreibung des Workflow
 
-<a href='https://svgur.com/i/DMT.svg' ><img src='https://svgur.com/i/DMT.svg' title='' /></a>
+
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk4.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk4.png?raw=true' title='' /></a>
 
 *Den Prozess starten.*
 
-<a href='https://svgur.com/i/DLm.svg' ><img src='https://svgur.com/i/DLm.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk5.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk5.png?raw=true' title='' /></a>
 
 _Kundendaten werden eingegeben und werden dem DMN-Prozess „Kundenbewertung entscheiden“ zur Verfügung gestellt.
 Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „Guter Kunde“ erhält. Im weiteren Prozessverlauf wird damit die Call-Activity „Werbeprogramm durchführen“ ausgeführt._
@@ -68,15 +69,15 @@ Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „G
 _Kundenbewertung:_ **„Guter Kunde“**
 
 
-<a href='https://svgur.com/i/DMd.svg' ><img src='https://svgur.com/i/DMd.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk7.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk7.png?raw=true' title='' /></a>
  
 *Der Prozess kann nicht fortfahren, da das Workflowmanagementsystem nicht mit dem Internet verbunden ist. Der Error „Keine Internetverbindung“ wird geworfen und die Ausnahmebehandlung gestartet. Nach herstellen der Internetverbindung kann der Prozess fortfahren.*
 
-<a href='https://svgur.com/i/DMU.svg' ><img src='https://svgur.com/i/DMU.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk8.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk8.png?raw=true' title='' /></a>
 
 *Die Service Task „Wetterbericht abrufen“ hat von OpenWeatherMaps die Bewölkungsdaten und die Temperatur der nächsten 5 Tage abgerufen und Durchschnittswerte aus den Tagwerten gebildet. Der DMN-Prozess „Werbeprogramm entscheiden“ empfiehlt anhand der Wetterdaten einen Wanderurlaub.*
 
-<a href='https://svgur.com/i/DKg.svg' ><img src='https://svgur.com/i/DKg.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk9.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk9.png?raw=true' title='' /></a>
 
  
 _Es wird eine E-Mail an das E-Mail-Postfach des Kunden gesendet, die den Werbetext und die Wetterkonditionen enthält._
@@ -118,7 +119,7 @@ _Die Abfrage liefert ein json-Dokument zurück, das Wetterdaten in 3-Stunden-Int
 
 
 
-<a href='https://svgur.com/i/DMV.svg' ><img src='https://svgur.com/i/DMV.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk10.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk10.png?raw=true' title='' /></a>
 
  
 
@@ -127,7 +128,7 @@ Mithilfe einer Schleife werden die Attribut-Werte der Attribute main.temp und cl
 
 
 
-<a href='https://svgur.com/i/DM6.svg' ><img src='https://svgur.com/i/DM6.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/bk11.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/bk11.png?raw=true' title='' /></a>
 
 
 
