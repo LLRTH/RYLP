@@ -64,25 +64,25 @@ _________________________________
 _Kundendaten werden eingegeben und werden dem DMN-Prozess „Kundenbewertung entscheiden“ zur Verfügung gestellt.
 Die Kundendaten wurden hier so gewählt, dass der Kunde die Kundenbewertung „Guter Kunde“ erhält. Im weiteren Prozessverlauf wird damit die Call-Activity „Werbeprogramm durchführen“ ausgeführt._
 
-<a href='https://svgur.com/i/DLc.svg' ><img src='https://svgur.com/i/DLc.svg' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk6.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk6.png?raw=true' title='' /></a>
 
 _Kundenbewertung:_ **„Guter Kunde“**
 
 
-<a href='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk6.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk6.png?raw=true' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk7.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk7.png?raw=true' title='' /></a>
+
  
 *Der Prozess kann nicht fortfahren, da das Workflowmanagementsystem nicht mit dem Internet verbunden ist. Der Error „Keine Internetverbindung“ wird geworfen und die Ausnahmebehandlung gestartet. Nach herstellen der Internetverbindung kann der Prozess fortfahren.*
 
-<a href='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk7.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk7.png?raw=true' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk8.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk8.png?raw=true' title='' /></a>
 
 *Die Service Task „Wetterbericht abrufen“ hat von OpenWeatherMaps die Bewölkungsdaten und die Temperatur der nächsten 5 Tage abgerufen und Durchschnittswerte aus den Tagwerten gebildet. Der DMN-Prozess „Werbeprogramm entscheiden“ empfiehlt anhand der Wetterdaten einen Wanderurlaub.*
 
-<a href='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk8.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk8.png?raw=true' title='' /></a>
+<a href='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk9.png?raw=true' ><img src='https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk9.png?raw=true' title='' /></a>
 
- 
 _Es wird eine E-Mail an das E-Mail-Postfach des Kunden gesendet, die den Werbetext und die Wetterkonditionen enthält._
  
- https://github.com/LLRTH/RYLP/blob/master/new%20folder/bk9.png?raw=true
+
  _________________________________
  
  
