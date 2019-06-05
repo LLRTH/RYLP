@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_02jsfy2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.0.1">
+  <decision id="Punkteanzahl_ermitteln" name="Punkteanzahl des Kunden ermitteln">
+    <extensionElements>
+      <biodi:bounds x="344" y="278" width="180" height="80" />
+      <biodi:edge source="BusinessKnowledgeModel_0v9hdk9">
+        <biodi:waypoints x="527" y="230" />
+        <biodi:waypoints x="480" y="278" />
+      </biodi:edge>
+      <biodi:edge source="InputData_16sk9ic">
+        <biodi:waypoints x="55" y="262" />
+        <biodi:waypoints x="122" y="289" />
+      </biodi:edge>
+      <biodi:edge source="InputData_04iktxo">
+        <biodi:waypoints x="60" y="324" />
+        <biodi:waypoints x="122" y="319" />
+      </biodi:edge>
+      <biodi:edge source="InputData_1xrkmct">
+        <biodi:waypoints x="30" y="408" />
+        <biodi:waypoints x="122" y="345" />
+      </biodi:edge>
+      <biodi:edge source="InputData_055v9l5">
+        <biodi:waypoints x="25" y="484" />
+        <biodi:waypoints x="170" y="358" />
+      </biodi:edge>
+      <biodi:edge source="Eigenkapital_Vermoegenswerte">
+        <biodi:waypoints x="282" y="325" />
+        <biodi:waypoints x="344" y="322" />
+      </biodi:edge>
+      <biodi:edge source="mntl_Einkommen">
+        <biodi:waypoints x="263" y="408" />
+        <biodi:waypoints x="359" y="358" />
+      </biodi:edge>
+      <biodi:edge source="Schufaeintrag_vorh">
+        <biodi:waypoints x="247" y="484" />
+        <biodi:waypoints x="395" y="358" />
+      </biodi:edge>
+      <biodi:edge source="bisherige_Kundenbewertung">
+        <biodi:waypoints x="284" y="246" />
+        <biodi:waypoints x="348" y="278" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredInput href="#InputData_16sk9ic" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_04iktxo" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_1xrkmct" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_055v9l5" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#Eigenkapital_Vermoegenswerte" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#mntl_Einkommen" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#Schufaeintrag_vorh" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#bisherige_Kundenbewertung" />
+    </informationRequirement>
+    <knowledgeRequirement>
+      <requiredKnowledge href="#BusinessKnowledgeModel_0v9hdk9" />
+    </knowledgeRequirement>
+    <decisionTable id="DecisionTable_1ko8kwa" hitPolicy="COLLECT" aggregation="SUM">
+      <input id="InputClause_1b2khq6" label="bisherige_Kundenbewertung">
+        <inputExpression id="LiteralExpression_0r4xo3x" typeRef="string">
+          <text>bisherige_Kundenbewertung</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0k5slzw">
+          <text>"gut","mittel","schlecht","keine"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1ac26tz" label="Eigenkapital_Vermoegenswerte">
+        <inputExpression id="LiteralExpression_1pfuby8" typeRef="double">
+          <text>Eigenkapital_Vermoegenswerte</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0k5nbyd" label="mntl_Einkommen">
+        <inputExpression id="LiteralExpression_0ajys3n" typeRef="double">
+          <text>mntl_Einkommen</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0wnqyhr" label="Schufaeintrag_vorh">
+        <inputExpression id="LiteralExpression_0r9n9fv" typeRef="boolean">
+          <text>Schufaeintrag_vorh</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_05waq35" label="Punkte_absolut" name="Punkte_absolut" typeRef="integer" />
+      <rule id="DecisionRule_1oudh1u">
+        <description>Maximal 900 Punkte möglich</description>
+        <inputEntry id="UnaryTests_1e0q2t6">
+          <text>"gut"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1exe4xc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e2g39k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18d2jka">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iz8k6f">
+          <text>100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hnyvoq">
+        <inputEntry id="UnaryTests_1olq79j">
+          <text>"mittel"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sm2scq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19u3tru">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08yjj6q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11jf12x">
+          <text>50</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tsbt8h">
+        <inputEntry id="UnaryTests_18mi6z1">
+          <text>"schlecht"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13it4qa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fyg6py">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14z0t05">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12ex487">
+          <text>-100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14h7c24">
+        <inputEntry id="UnaryTests_06suvap">
+          <text>"keine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b5ja84">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05qidd7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bx9b1g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f9t81u">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o0tvvp">
+        <inputEntry id="UnaryTests_17rw3nu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l3kv71">
+          <text>&lt;500</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1twvxvf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16574xi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dvp7pq">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1horytt">
+        <inputEntry id="UnaryTests_06jdl2z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0czlb5p">
+          <text>[500..1000[</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14clwpl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11f9y5d">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0w46gkz">
+          <text>50</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bjm9un">
+        <inputEntry id="UnaryTests_0imrczq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14ra8la">
+          <text>[1000..10000[</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ufn5dc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nno37z">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sjw25f">
+          <text>100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0luq5y6">
+        <inputEntry id="UnaryTests_02iwpag">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n6qs39">
+          <text>&gt;=10000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pvfe4i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xdjfye">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m2zypu">
+          <text>300</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0874mck">
+        <inputEntry id="UnaryTests_083ophh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yuxj14">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_097thb7">
+          <text>&lt;1600</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vqpp56">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_176bciv">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xry0s2">
+        <inputEntry id="UnaryTests_0rvlarw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_047h3bg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nownpo">
+          <text>[1600..2000[</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1byn4za">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rqmib2">
+          <text>200</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0d9mswi">
+        <inputEntry id="UnaryTests_0gy9i8e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gdpsu9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02fpbr1">
+          <text>[2000..4000[</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u329ib">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0locfcv">
+          <text>300</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17zkxvt">
+        <inputEntry id="UnaryTests_1clq5ys">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ks5egu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xbby4k">
+          <text>&gt;=4000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07btgxk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0frlr6w">
+          <text>500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xwag9a">
+        <inputEntry id="UnaryTests_066tljl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mdhgmd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15yj8bq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g6mjl2">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qwwwe1">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g0nb83">
+        <inputEntry id="UnaryTests_0qgrtcx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xhsba5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nibqby">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u6fyjl">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03w5npn">
+          <text>-10000</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <knowledgeSource id="KnowledgeSource_0esqdrf" name="Richtlinie der Kunden-bewertung">
+    <extensionElements>
+      <biodi:bounds x="581" y="81" width="100" height="63" />
+    </extensionElements>
+  </knowledgeSource>
+  <businessKnowledgeModel id="BusinessKnowledgeModel_0v9hdk9" name="Kunden-bewertungsformel">
+    <extensionElements>
+      <biodi:bounds x="482" y="184" width="135" height="46" />
+      <biodi:edge source="KnowledgeSource_0esqdrf">
+        <biodi:waypoints x="604" y="144" />
+        <biodi:waypoints x="569" y="184" />
+      </biodi:edge>
+    </extensionElements>
+    <authorityRequirement>
+      <requiredAuthority href="#KnowledgeSource_0esqdrf" />
+    </authorityRequirement>
+  </businessKnowledgeModel>
+  <inputData id="bisherige_Kundenbewertung" name="bisherige_Kundenbewertung">
+    <extensionElements>
+      <biodi:bounds x="159" y="217" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="Eigenkapital_Vermoegenswerte" name="Eigenkapital_Vermoegenswerte">
+    <extensionElements>
+      <biodi:bounds x="157" y="306" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="mntl_Einkommen" name="mntl_Einkommen">
+    <extensionElements>
+      <biodi:bounds x="156" y="408" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="Schufaeintrag_vorh" name="Schufaeintrag_vorh">
+    <extensionElements>
+      <biodi:bounds x="157" y="484" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <decision id="Punkte_zu_Prozent" name="Punkte in Prozent umrechnen">
+    <extensionElements>
+      <biodi:bounds x="577" y="277" width="180" height="80" />
+      <biodi:edge source="Punkteanzahl_ermitteln">
+        <biodi:waypoints x="524" y="317" />
+        <biodi:waypoints x="577" y="317" />
+      </biodi:edge>
+      <biodi:edge source="InputData_1lzwpue">
+        <biodi:waypoints x="725" y="214" />
+        <biodi:waypoints x="713" y="277" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#Punkteanzahl_ermitteln" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0t4ni7r">
+      <input id="InputClause_1sqkwgg" label="Punkte_absolut">
+        <inputExpression id="LiteralExpression_0qz67dh" typeRef="integer">
+          <text>Punkte_absolut</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1iksbhi" label="Punkte_in_Prozent" name="Punkte_in_Prozent" typeRef="double" />
+      <rule id="DecisionRule_0hjtc7p">
+        <inputEntry id="UnaryTests_1xd9jbq">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1trcb43">
+          <text>(Punkte_absolut/900)*100</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Entscheidung_Kundenbewertung" name="Entscheidung über Kundenbewertung">
+    <extensionElements>
+      <biodi:bounds x="808" y="275" width="180" height="80" />
+      <biodi:edge source="Punkte_zu_Prozent">
+        <biodi:waypoints x="757" y="317" />
+        <biodi:waypoints x="808" y="317" />
+      </biodi:edge>
+      <biodi:edge source="InputData_1lzwpue">
+        <biodi:waypoints x="803" y="211" />
+        <biodi:waypoints x="860" y="275" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#Punkte_zu_Prozent" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_1lzwpue" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0vy8hh5">
+      <input id="InputClause_0jobrug" label="Punkte_in_Prozent">
+        <inputExpression id="LiteralExpression_03yljuy" typeRef="double">
+          <text>Punkte_in_Prozent</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0px47c0" label="Bewertungsdatum">
+        <inputExpression id="LiteralExpression_0ctruyk" typeRef="date">
+          <text>Bewertungsdatum</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_09pvm34" label="Kundenbewertung_Ergebnis" name="Kundenbewertung_Ergebnis" typeRef="string" />
+      <rule id="DecisionRule_09ywgos">
+        <inputEntry id="UnaryTests_00jnbna">
+          <text>&gt;=50</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qtpnuu">
+          <text>[date and time("2019-01-01T00:00:00")..date and time("2020-01-01T00:00:00")[</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iid4i6">
+          <text>"Guter Kunde"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cxgcc3">
+        <inputEntry id="UnaryTests_0uwwnlf">
+          <text>&lt;50</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rzyqgw">
+          <text>[date and time("2019-01-01T00:00:00")..date and time("2020-01-01T00:00:00")[</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_124257u">
+          <text>"Schlechter Kunde"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1weu8n5">
+        <inputEntry id="UnaryTests_1hnh333">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rsb4pf">
+          <text>not([date and time("2019-01-01T00:00:00")..date and time("2020-01-01T00:00:00")[)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vouk1r">
+          <text>"k.A. EntsMod nicht aktuell"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1lzwpue" name="Bewertungsdatum">
+    <extensionElements>
+      <biodi:bounds x="744" y="166" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+</definitions>
