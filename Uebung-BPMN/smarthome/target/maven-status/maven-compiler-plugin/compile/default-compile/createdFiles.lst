@@ -1,0 +1,7 @@
+org\camunda\bpm\getstarted\smarthome\Rolladen50herunterfahren.class
+org\camunda\bpm\getstarted\smarthome\VorgangLoggen.class
+org\camunda\bpm\getstarted\smarthome\SmarthomeApplication.class
+org\camunda\bpm\getstarted\smarthome\zGenerateUserOutput.class
+org\camunda\bpm\getstarted\smarthome\Rolladen80herunterfahren.class
+org\camunda\bpm\getstarted\smarthome\zAPI.class
+org\camunda\bpm\getstarted\smarthome\BewoelkungsdatenAnfordern.class
