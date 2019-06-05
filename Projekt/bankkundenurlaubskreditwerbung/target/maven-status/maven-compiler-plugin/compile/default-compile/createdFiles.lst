@@ -1,0 +1,8 @@
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\GoogleMail$1.class
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\GoogleMail.class
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\WeatherData.class
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\API.class
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\WetterberichtAbrufen.class
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\WerbungSenden.class
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\BankkundenurlaubskreditwerbungApplication.class
+org\camunda\bpm\getstarted\bankkundenurlaubskreditwerbung\VerbindungsausfallLoggen.class

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form name="requestLoan">
+
+<div class="form-group">
+	<label>bisherige_Kundenbewertung</label>
+	<select
+	  	 cam-variable-name="bisherige_Kundenbewertung"
+	     cam-variable-type="String"
+	>
+		<option>gut</option>
+		<option>mittel</option>
+		<option>schlecht</option>
+		<option>keine</option>	
+	</select>
+</div>
+	
+  <div class="form-group">
+    <label>Eigenkapital_Vermoegenswerte</label>
+    <input type="text" cam-variable-name="Eigenkapital_Vermoegenswerte"
+    	   cam-variable-type="Double"
+    />
+    z.B.: 1000.0
+  </div>
+  
+  <div class="form-group">
+    <label>mntl_Einkommen</label>
+    <input type="text" cam-variable-name="mntl_Einkommen"
+    	   cam-variable-type="Double"
+    />
+    z.B.: 2000.0
+  </div>
+  
+  <div class="form-group">
+    <label>Schufaeintrag_vorh</label>
+    <input type="checkbox"
+       cam-variable-name="Schufaeintrag_vorh"
+       cam-variable-type="Boolean"
+    />
+  </div>
+  
+  <div class="form-group">
+    <label>Bewertungsdatum</label>
+    <input type="text"
+       cam-variable-name="Bewertungsdatum"
+       cam-variable-type="Date"
+  	/>
+  	z.B.: 2019-01-01T00:00:00
+  </div>
+	
+</form>
+

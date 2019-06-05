@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_1jbcxnd" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.0.1">
+  <decision id="Werbeprogramm_entscheiden" name="Werbeprogramm entscheiden">
+    <extensionElements>
+      <biodi:bounds x="150" y="75" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="FIRST">
+      <input id="input_1" label="Bewoelkung_in_Prozent">
+        <inputExpression id="inputExpression_1" typeRef="integer">
+          <text>Bewoelkung_in_Prozent</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1afkmcq" label="Temperatur_in_Celsius">
+        <inputExpression id="LiteralExpression_1dg06h5" typeRef="double">
+          <text>Temperatur_in_Celsius</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Werbeprogramm" name="Werbeprogramm" typeRef="string">
+        <outputValues id="UnaryTests_1genncu">
+          <text>"Badeurlaub","Kur-/Wellnessurlaub","Wanderurlaub","Fahrradurlaub"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0vdwh8e">
+        <description>durchschnittliche Bewoelkung und 
+Temperatur der nächsten Woche</description>
+        <inputEntry id="UnaryTests_134gxhd">
+          <text>&lt;=40</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yslyym">
+          <text>&gt;=25</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jnyyb8">
+          <text>"Badeurlaub"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k97g4z">
+        <inputEntry id="UnaryTests_06jgef0">
+          <text>&lt;=40</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18vqdk4">
+          <text>&gt;=10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pw2q7d">
+          <text>"Fahrradurlaub"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lqjv7z">
+        <inputEntry id="UnaryTests_12y41yc">
+          <text>&gt;40</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03bfzvf">
+          <text>&gt;=10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yokdxd">
+          <text>"Wanderurlaub"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ko4032">
+        <inputEntry id="UnaryTests_0xvsbs7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00ug9kz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12hjx3h">
+          <text>"Kur-/Wellnessurlaub"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
